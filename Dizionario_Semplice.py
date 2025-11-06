@@ -18,5 +18,3 @@ if scelta == 'città':
 
 if scelta == 'professione':
  print(f"Risultato:{persona.get("professione")}")
-
-print("pushata")
