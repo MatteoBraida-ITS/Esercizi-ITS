@@ -1,65 +1,52 @@
-media_Matteo = 0
-media_Marco = 0
-media_Giuseppe = 0
-media_migliore = 0
+#Creo il dizionario con all'interno altri 3 diversi dizionari con i dati degli studenti
 
 dizionario = {
     "Matteo": {
         "nome": "Matteo",
         "età": "28",
         "voto matematica": 8,
-        "voto italiano": 7,
-        "media": media_Matteo
+        "voto italiano": 7
     },
 
     "Marco": {
         "nome": "Marco",
         "età": "24",
         "voto matematica": 10,
-        "voto italiano": 7,
-        "media": media_Marco
+        "voto italiano": 7
     },
 
     "Giuseppe": {
         "nome": "Giuseppe",
         "età": "26",
         "voto matematica": 4,
-        "voto italiano": 10,
-        "media": media_Giuseppe
+        "voto italiano": 10
     }
 }
 
-dizionario["Matteo"]["media"] = media_Matteo = (dizionario["Matteo"]["voto matematica"] + dizionario["Matteo"]["voto italiano"]) / 2 
-dizionario["Marco"]["media"] = media_Marco = (dizionario["Marco"]["voto matematica"] + dizionario["Marco"]["voto italiano"]) / 2 
-dizionario["Giuseppe"]["media"] = media_Giuseppe = (dizionario["Giuseppe"]["voto matematica"] + dizionario["Giuseppe"]["voto italiano"]) / 2 
+#uso un ciclo FOR per calcolare la media dei voti degli studenti
 
-studente = input("Quale studente vuoi visualizzare? (Matteo,Marco,Giuseppe):")
+for studente in dizionario:
+    voto_mat = dizionario[studente]["voto matematica"]
+    voto_ita = dizionario[studente]["voto italiano"]
+    dizionario[studente]["media"] = (voto_mat + voto_ita) / 2
 
-if studente == 'Matteo' or studente == 'matteo':
+#Chiedo all'utente quale allievo vuole visualizzare
+studente = input("quale studente vuoi visualizzare?: ").strip()
+
+#formatto l'input che ricevo dall'utente in modo che arrivi sempre con iniziale Maiuscola
+studente_formattato = studente.capitalize()
+
+#Una volta ricevuto l'input se viene trovato nel dizionario stamperà le relative informazioni
+if studente_formattato in dizionario:
     print()
-    print("Informazioni Matteo:")
-    print(f"età: {dizionario["Matteo"]["età"]}")
-    print(f"Voto matematica: {dizionario["Matteo"]["voto matematica"]}")
-    print(f"Voto italiano: {dizionario["Matteo"]["voto italiano"]}")
-    print(f"Media: {dizionario["Matteo"]["media"]}")
+    print(f"Informazioni {studente_formattato}:")
+    print(f"età: {dizionario[studente_formattato]["età"]}")
+    print(f"Voto matematica: {dizionario[studente_formattato]["voto matematica"]}")
+    print(f"Voto italiano: {dizionario[studente_formattato]["voto italiano"]}")
+    print(f"Media: {dizionario[studente_formattato]["media"]}")
 
-if studente == 'Marco' or studente == 'marco':
-    print()
-    print("Informazioni Marco:")
-    print(f"età: {dizionario["Marco"]["età"]}")
-    print(f"Voto matematica: {dizionario["Marco"]["voto matematica"]}")
-    print(f"Voto italiano: {dizionario["Marco"]["voto italiano"]}")
-    print(f"Media: {dizionario["Marco"]["media"]}")
-
-
-if studente == 'Giuseppe' or studente == 'giuseppe':
-    print()
-    print("Informazioni Giuseppe:")
-    print(f"età: {dizionario["Giuseppe"]["età"]}")
-    print(f"Voto matematica: {dizionario["Giuseppe"]["voto matematica"]}")
-    print(f"Voto italiano: {dizionario["Giuseppe"]["voto italiano"]}")
-    print(f"Media: {dizionario["Giuseppe"]["media"]}")
-
+#Qui calcolo la media dei voti di ogni studente e la inserisco in una variabile che poi useremo 
+#per visualizzare lo studente con la media migliore
 studente_migliore = max(dizionario.keys(), key=lambda x: dizionario[x]['media'])
 media_migliore = dizionario[studente_migliore]["media"]
 
