@@ -8,14 +8,14 @@ dizionario = {
         "nome": "Matteo",
         "età": "28",
         "voto matematica": 8,
-        "voto italiano": 10,
+        "voto italiano": 7,
         "media": media_Matteo
     },
 
     "Marco": {
         "nome": "Marco",
         "età": "24",
-        "voto matematica": 6,
+        "voto matematica": 10,
         "voto italiano": 7,
         "media": media_Marco
     },
@@ -35,7 +35,7 @@ dizionario["Giuseppe"]["media"] = media_Giuseppe = (dizionario["Giuseppe"]["voto
 
 studente = input("Quale studente vuoi visualizzare? (Matteo,Marco,Giuseppe):")
 
-if studente == 'Matteo':
+if studente == 'Matteo' or studente == 'matteo':
     print()
     print("Informazioni Matteo:")
     print(f"età: {dizionario["Matteo"]["età"]}")
@@ -43,7 +43,7 @@ if studente == 'Matteo':
     print(f"Voto italiano: {dizionario["Matteo"]["voto italiano"]}")
     print(f"Media: {dizionario["Matteo"]["media"]}")
 
-if studente == 'Marco':
+if studente == 'Marco' or studente == 'marco':
     print()
     print("Informazioni Marco:")
     print(f"età: {dizionario["Marco"]["età"]}")
@@ -52,7 +52,7 @@ if studente == 'Marco':
     print(f"Media: {dizionario["Marco"]["media"]}")
 
 
-if studente == 'Giuseppe':
+if studente == 'Giuseppe' or studente == 'giuseppe':
     print()
     print("Informazioni Giuseppe:")
     print(f"età: {dizionario["Giuseppe"]["età"]}")
@@ -60,5 +60,8 @@ if studente == 'Giuseppe':
     print(f"Voto italiano: {dizionario["Giuseppe"]["voto italiano"]}")
     print(f"Media: {dizionario["Giuseppe"]["media"]}")
 
-result = max(dizionario.keys(), key=lambda x: dizionario[x]['media'])
-print(result)
+studente_migliore = max(dizionario.keys(), key=lambda x: dizionario[x]['media'])
+media_migliore = dizionario[studente_migliore]["media"]
+
+print()
+print(f"Lo studente con la media più alta è {studente_migliore} con la media di {media_migliore}")
