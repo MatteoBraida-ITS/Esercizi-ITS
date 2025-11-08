@@ -53,6 +53,3 @@ while True:
 
  elif scelta == '7':
     break
-
-
-
