@@ -1,4 +1,4 @@
-meteo = (("Milano", 12),("Roma", 15),("Napoli", 18),("Venezia", 10))
+meteo = [("Milano", 12),("Roma", 15),("Napoli", 18),("Venezia", 10)]
 
 diz = dict((città,temperatura) for città,temperatura in meteo)
 
@@ -48,7 +48,7 @@ while True:
 
  elif scelta == '6':
     operazioni += 1
-    new_città = input("Inserisci una nuova città:")
+    new_città = input("Inserisci una nuova città:").capitalize()
     new_temperatura = int(input("Inesrisci la sua temperatura:"))
     diz.update({new_città: new_temperatura})
     print("Città aggiunta!")
