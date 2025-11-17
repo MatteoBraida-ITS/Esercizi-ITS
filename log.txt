@@ -1,0 +1,9 @@
+[2025 11 17  15:35:31] programma avviato
+[2025 11 17  15:35:31] utente ha inserito il nome: Mario
+[2025 11 17  15:35:31] programma terminato
+[2025 11 17  15:35:38] programma avviato
+[2025 11 17  15:35:38] utente ha inserito il nome: Mario
+[2025 11 17  15:35:38] programma terminato
+[2025 11 17  15:35:42] programma avviato
+[2025 11 17  15:35:42] utente ha inserito il nome: Mario
+[2025 11 17  15:35:42] programma terminato
