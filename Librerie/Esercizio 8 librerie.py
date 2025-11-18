@@ -1,7 +1,5 @@
-lista_spesa = []
-
-with open("lista_spesa.txt", "w") as file: 
-    pass
+lista_spesa =[]
+new_item = 0
 
 while True:
  print("\n")
@@ -13,9 +11,12 @@ while True:
  print("\n")
  
  if scelta == '1':
-     new_item = input("Cosa vuoi aggiungere alla lista?:")
-     lista_spesa.append(new_item)
-     print(f"✅ {new_item} aggiunto alla lista!")
+  with open("lista_spesa.txt", "w+") as file:
+    new_item = input("Cosa vuoi aggiungere?:")
+    lista_spesa.append(new_item)
+    for items in lista_spesa:
+      file.write('%s\n' %items)
+    print(f"✅ {new_item} aggiunto alla lista!")
  
  if scelta == '2':
      if lista_spesa == []:
