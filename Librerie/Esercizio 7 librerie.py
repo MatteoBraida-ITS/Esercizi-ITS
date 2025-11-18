@@ -14,9 +14,8 @@ dati = [
     {"nome": "Anna", "voto": 7}
 ]
 
-with open('dati.json', 'w') as file:
+with open("/Users/Matteo/Documents/GitHub/Esercizi-ITS/miei_dati/dati.json", 'w') as file:
  json.dump(dati, file, indent=4)
- percorso = os.path.join("miei_dati", "dati.json")
+ percorso = os.path.join("/Users/Matteo/Documents/GitHub/Esercizi-ITS/miei_dati", "dati.json")
 
 print(f"File salvato in {percorso}")
-
