@@ -1,14 +1,17 @@
 [
     {
         "nome": "Mario",
-        "voto": 8
+        "cognome": "Rossi",
+        "voto": "8"
     },
     {
         "nome": "Luigi",
-        "voto": 9
+        "cognome": "Bianchi",
+        "voto": "8"
     },
     {
         "nome": "Anna",
-        "voto": 7
+        "cognome": "Verdi",
+        "voto": "8"
     }
 ]
