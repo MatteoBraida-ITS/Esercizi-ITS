@@ -1,0 +1,18 @@
+INFO - 21:23:38 - INFO - Programma avviato
+INFO - 21:23:38 - INFO - Utente 'Mario' ha fatto il login
+WARNING - 21:23:38 - WARNING - Memoria bassa (80%)
+ERROR - 21:23:38 - ERROR - Connessione al database fallita
+INFO - 21:23:38 - INFO - Riprovando connessione
+INFO - 21:23:38 - INFO - Conessione riuscita!
+INFO - 21:25:35 - INFO - Programma avviato
+INFO - 21:25:35 - INFO - Utente 'Mario' ha fatto il login
+WARNING - 21:25:35 - WARNING - Memoria bassa (80%)
+ERROR - 21:25:35 - ERROR - Connessione al database fallita
+INFO - 21:25:35 - INFO - Riprovando connessione
+INFO - 21:25:35 - INFO - Conessione riuscita!
+INFO - 21:25:45 - INFO - Programma avviato
+INFO - 21:25:45 - INFO - Utente 'Mario' ha fatto il login
+WARNING - 21:25:45 - WARNING - Memoria bassa (80%)
+ERROR - 21:25:45 - ERROR - Connessione al database fallita
+INFO - 21:25:45 - INFO - Riprovando connessione
+INFO - 21:25:45 - INFO - Conessione riuscita!
