@@ -1,0 +1,38 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 10px;
+      }
+      input {
+        outline: none;
+        border: 3px solid;
+        border-color: grey;
+      }
+      input:focus {
+        outline: none;
+        border: 3px solid;
+        border-color: blue;
+        box-shadow: 3px 3px;
+      }
+      button:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Nome" />
+      <input type="email" placeholder="Email" />
+      <button type="submit">Invia</button>
+    </form>
+  </body>
+</html>
