@@ -5,9 +5,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    .hero
+    <style>
+      .hero {
+        size: 400px 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .testo {
+        position: absolute;
+        top: 50%;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    </style>
   </head>
   <body>
-    <div class="hero"></div>
+    <div class="hero">
+      <img src="https://picsum.photos/400/400" alt="img1" />
+      <div class="testo">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+          autem, necessitatibus maxime recusandae temporibus possimus nihil odio
+          ab non porro, magni saepe corporis nisi debitis facere. Numquam nisi
+          exercitationem neque!
+        </p>
+      </div>
+    </div>
   </body>
 </html>

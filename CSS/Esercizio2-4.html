@@ -1,0 +1,44 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .blu_verde {
+        height: 200px;
+        position: relative;
+        background-color: blue;
+        background: linear-gradient(to right, blue, green);
+      }
+      .nero_trasparente {
+        height: 200px;
+        position: relative;
+        background-color: black;
+        background: linear-gradient(to bottom, black, transparent);
+      }
+      .diagonale {
+        height: 200px;
+        background: linear-gradient(to bottom right, red, orange, yellow);
+      }
+      .testo {
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blu_verde">
+      <div class="testo"><p>Gradiente orrizzontale da blu a verde</p></div>
+    </div>
+    <div class="nero_trasparente">
+      <div class="testo"><p>Gradiente verticale da nero a trasparente</p></div>
+    </div>
+    <div class="diagonale">
+      <div class="testo">
+        <p>Gradiente diagonale da rosso ad arancione a giallo</p>
+      </div>
+    </div>
+  </body>
+</html>
