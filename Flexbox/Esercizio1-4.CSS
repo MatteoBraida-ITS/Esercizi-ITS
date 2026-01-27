@@ -1,0 +1,50 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+  border-style: solid;
+  border-color: green;
+}
+
+.container1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.container2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container3 {
+  display: flex;
+  justify-content: center;
+}
+
+.container4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container5 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container6 {
+  display: flex;
+  justify-content: space-evenly;
+}

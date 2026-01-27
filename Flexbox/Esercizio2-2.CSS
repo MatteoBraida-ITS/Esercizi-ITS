@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  width: 100%;
+}
+
+.box1,
+.box2,
+.box3 {
+  background-color: blue;
+  color: white;
+  border-style: solid;
+  border-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.box1,
+.box3 {
+  flex: 1;
+}
+
+.box2 {
+  flex: 2;
+}

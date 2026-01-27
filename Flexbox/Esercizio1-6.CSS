@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container {
+  width: 400px;
+  border-style: solid;
+  border-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
