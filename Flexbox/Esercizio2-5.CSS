@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  display: flex;
+  width: 600px;
+  height: 150px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 100px;
+  display: flex;
+  background-color: blue;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border: 1px solid black;
+}
+
+.grow-item {
+  flex: 1;
+}
+
+.none-item {
+  flex: none;
+  width: 150px;
+}
+
+.fixed-item {
+  flex: 0 0 200px;
+}
+
+.auto-item {
+  flex: 1 1 auto;
+}
