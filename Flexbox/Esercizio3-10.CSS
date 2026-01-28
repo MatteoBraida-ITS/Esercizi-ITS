@@ -1,0 +1,15 @@
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: darkgray;
+  border: 2px solid black;
+  gap: 10px;
+}
+
+.todo-item {
+  background-color: yellow;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

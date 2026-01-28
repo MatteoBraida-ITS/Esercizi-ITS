@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card {
+  width: 280px;
+  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+p {
+  padding: 0 20px;
+}
+
+button {
+  font-size: 18px;
+  width: 100%;
+}

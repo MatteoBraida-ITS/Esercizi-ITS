@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+.holy-grail {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: auto;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  width: 200px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+footer {
+  height: auto;
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+}

@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  width: 100vh;
+  height: 100vh;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}

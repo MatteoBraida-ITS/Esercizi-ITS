@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: darkgray;
+  color: white;
+  font-size: 24px;
+  justify-content: space-evenly;
+}
+
+.search {
+  flex: 1;
+}
+
+nav input {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  padding: 0 20px;
+}
+
+.user-actions {
+  padding: 0 20px;
+}
