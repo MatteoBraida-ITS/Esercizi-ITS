@@ -25,3 +25,7 @@ button {
 p {
   padding: 0 20px;
 }
+
+.highlighted {
+  border: 2px solid red;
+}
