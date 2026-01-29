@@ -1,4 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .grid-container {
+  width: fit-content;
   display: grid;
   background-color: darkgray;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border: 2px solid black;
 }

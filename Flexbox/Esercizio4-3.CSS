@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  gap: 10px;
+}
+
+.container {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  background-color: darkgrey;
+}
+
+.uno {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.due {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.tre {
+  grid-template-columns: 200px 1fr 1fr;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border: 2px solid black;
+}
+
+.gruppo {
+  text-align: center;
+}
