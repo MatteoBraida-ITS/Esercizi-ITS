@@ -54,6 +54,7 @@ footer {
 
 @media (max-width: 768px) {
   .container {
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
