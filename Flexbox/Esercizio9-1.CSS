@@ -1,0 +1,71 @@
+.col-1 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-2 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-3 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-4 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-5 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-6 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-7 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-8 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-9 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-10 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-11 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}
+
+.col-12 {
+  background-color: lightgreen;
+  display: grid;
+  grid-column: span 1;
+}

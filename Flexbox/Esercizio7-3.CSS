@@ -8,8 +8,19 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(3, 150px);
+  border: 2px solid black;
   align-items: start;
   justify-items: start;
+}
+
+#centrato {
+  align-self: center;
+  justify-self: center;
+}
+
+#destra {
+  align-self: self-end;
+  justify-self: self-end;
 }
 
 .item {
