@@ -1,0 +1,14 @@
+.container {
+  height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.item {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}

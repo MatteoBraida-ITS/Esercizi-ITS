@@ -1,0 +1,72 @@
+.container {
+  width: 480px;
+  height: 100vw;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  font-size: 50px;
+}
+
+.itm2,
+.itm3,
+.itm4 {
+  display: none;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+    background-color: green;
+    display: flex;
+  }
+
+  .itm1,
+  .itm3,
+  .itm4 {
+    display: none;
+  }
+
+  .itm2 {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    background-color: red;
+    display: flex;
+  }
+
+  .itm1,
+  .itm2,
+  .itm4 {
+    display: none;
+  }
+
+  .itm3 {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+  }
+
+  .itm1,
+  .itm2,
+  .itm3 {
+    display: none;
+  }
+
+  .itm4 {
+    display: block;
+  }
+}

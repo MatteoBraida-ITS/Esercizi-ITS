@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1200px;
+  height: 700px;
+  font-size: 30px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+    background-color: green;
+  }
+}
