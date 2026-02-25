@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .luce {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #ddd;
+        margin: 8px auto;
+        border: 2px solid #999;
+        transition: background-color 0.3s;
+      }
+
+      #semaforo {
+        width: 120px;
+        background: #333;
+        padding: 16px;
+        border-radius: 12px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="semaforo">
+      <div class="luce" id="rosso"></div>
+      <div class="luce" id="giallo"></div>
+      <div class="luce" id="verde"></div>
+    </div>
+    <button id="btn-prossimo">Prossimo</button>
+  </body>
+  <script src="Esercizio4.js"></script>
+</html>
