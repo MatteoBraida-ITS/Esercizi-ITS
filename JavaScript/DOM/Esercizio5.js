@@ -11,6 +11,7 @@ function aggiungi() {
 }
 
 function azzera() {
+  contatore = 0;
   numero.textContent = "0";
 }
 
