@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .display {
+        width: 400px;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid blue;
+        border-radius: 50px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 1rem;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+
+      .btnStart {
+        background-color: lightgreen;
+      }
+
+      .btnStop {
+        background-color: lightcoral;
+      }
+
+      h2 {
+        color: red;
+        font-size: 100px;
+      }
+
+      li {
+        list-style-type: none;
+        font-size: 25px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display">
+        <h2 class="tempo">00:00.00</h2>
+      </div>
+      <div class="buttons">
+        <button class="btnStart">Start</button>
+        <button class="btnStop">Stop</button>
+        <button class="btnReset">Reset</button>
+        <button class="btnGiro">Giro</button>
+      </div>
+      <div>
+        <ul class="listaGiri">
+          <li class="giro">Giro 1:</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="Esercizio5.js"></script>
+</html>

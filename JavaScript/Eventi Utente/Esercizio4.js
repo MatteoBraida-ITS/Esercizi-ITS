@@ -11,11 +11,27 @@ campoNome.addEventListener("focus", () => {
   campoConfirmPsw.style.borderColor = "";
 });
 
+campoNome.addEventListener("input", () => {
+  if (campoNome.value.trim().length < 2) {
+    campoNome.style.borderColor = "red";
+  } else {
+    campoNome.style.borderColor = "blue";
+  }
+});
+
 campoMail.addEventListener("focus", () => {
   campoMail.style.borderColor = "blue";
   campoNome.style.borderColor = "";
   campoPassword.style.borderColor = "";
   campoConfirmPsw.style.borderColor = "";
+});
+
+campoMail.addEventListener("input", () => {
+  if (campoMail.value.includes("@")) {
+    campoMail.style.borderColor = "blue";
+  } else {
+    campoMail.style.borderColor = "red";
+  }
 });
 
 campoPassword.addEventListener("focus", () => {
@@ -25,6 +41,14 @@ campoPassword.addEventListener("focus", () => {
   campoConfirmPsw.style.borderColor = "";
 });
 
+campoPassword.addEventListener("input", () => {
+  if (campoPassword.value.trim().length < 8) {
+    campoPassword.style.borderColor = "red";
+  } else {
+    campoPassword.style.borderColor = "blue";
+  }
+});
+
 campoConfirmPsw.addEventListener("focus", () => {
   campoConfirmPsw.style.borderColor = "blue";
   campoMail.style.borderColor = "";
@@ -32,16 +56,24 @@ campoConfirmPsw.addEventListener("focus", () => {
   campoNome.style.borderColor = "";
 });
 
+campoConfirmPsw.addEventListener("input", () => {
+  if (campoConfirmPsw.value === campoPassword.value) {
+    campoConfirmPsw.style.borderColor = "blue";
+  } else {
+    campoConfirmPsw.style.borderColor = "red";
+  }
+});
+
 function validazione() {
-  const nome = campoNome.campoNome.value.trim();
+  const nome = campoNome.value.trim();
   const mail = campoMail.value.trim();
   const psw = campoPassword.value;
   const confirmPsw = campoConfirmPsw.value;
 
   return (
-    nome.lenght >= 2 &&
+    nome.length >= 2 &&
     mail.includes("@") &&
-    psw.lenght >= 8 &&
+    psw.length >= 8 &&
     psw === confirmPsw
   );
 }
@@ -51,7 +83,7 @@ function abilitaPulsante() {
 }
 
 [campoNome, campoMail, campoPassword, campoConfirmPsw].forEach((campo) => {
-  addEventListener("input", aggiornaPulsante);
+  addEventListener("input", abilitaPulsante);
 });
 
 btnRegistrazione.addEventListener("click", (e) => {
