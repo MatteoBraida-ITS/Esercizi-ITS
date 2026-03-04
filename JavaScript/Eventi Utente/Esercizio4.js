@@ -32,16 +32,27 @@ campoConfirmPsw.addEventListener("focus", () => {
   campoNome.style.borderColor = "";
 });
 
-function nomeValido() {
-  let nome = document.forms["registrazione"]["fname"].value;
+function validazione() {
+  const nome = campoNome.campoNome.value.trim();
+  const mail = campoMail.value.trim();
+  const psw = campoPassword.value;
+  const confirmPsw = campoConfirmPsw.value;
 
-  if (nome.length >= 2) {
-    console.log("Nome Valido");
-  } else {
-    console.log("Nome non valido");
-    alert("Nome inserito non valido, deve contenere almeno 2 caratteri");
-  }
+  return (
+    nome.lenght >= 2 &&
+    mail.includes("@") &&
+    psw.lenght >= 8 &&
+    psw === confirmPsw
+  );
 }
+
+function abilitaPulsante() {
+  btnRegistrazione.disabled = !validazione();
+}
+
+[campoNome, campoMail, campoPassword, campoConfirmPsw].forEach((campo) => {
+  addEventListener("input", aggiornaPulsante);
+});
 
 btnRegistrazione.addEventListener("click", (e) => {
   e.preventDefault();
