@@ -47,7 +47,9 @@ btnReset.addEventListener("click", () => {
   intervalID = null;
   tempo.textContent = "00:00.00";
   tempoUltimoGiro = 0;
-  giro.textContent = "";
+  listaGiri.textContent = "";
+  numeroGiri = 0;
+  centesimi = 0;
 });
 
 btnGiro.addEventListener("click", () => {
