@@ -19,12 +19,6 @@ function caricaDatabase(tabella) {
   });
 }
 
-function aspetta(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
-
 caricaDatabase("utenti")
   .then((db) => console.log(db))
   .catch((err) => console.error(err.message));
