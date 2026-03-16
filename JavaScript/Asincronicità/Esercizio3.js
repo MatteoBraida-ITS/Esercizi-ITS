@@ -6,29 +6,24 @@ const utenti = [
   { id: 5, nome: "Sabrina" },
 ];
 
-const inizio = new Date().toLocaleTimeString();
-const fine = new Date().toLocaleTimeString();
-
-function mostraUtente(id, nome) {
+function caricaUtente(id) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
-        id: `${id}`,
-        nome: `${nome}`,
+        id,
+        nome: `Utente_${id}`,
         caricatoAlle: new Date().toLocaleTimeString(),
       });
     }, 1000);
   });
 }
 
-async function caricaUtente() {
-  console.log(`Operazione di caricamento iniziata alle ${inizio}`);
-  for (const utente of utenti) {
-    const risultato = await mostraUtente(utente.id, utente.nome);
-    console.log(risultato);
-  }
-  console.log("Tutti gli utenti caricati correttamente!");
-  console.log(`Operazione di caricamento completata alle ${fine}`);
-}
+const ids = [1, 2, 3, 4, 5];
 
-caricaUtente();
+async function sequenziale() {
+  const inizio = Date.now();
+  for (const id of ids) {
+    const utente = await caricaUtente(id);
+    console.log;
+  }
+}
