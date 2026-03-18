@@ -24,6 +24,27 @@ async function sequenziale() {
   const inizio = Date.now();
   for (const id of ids) {
     const utente = await caricaUtente(id);
-    console.log;
+    console.log(utente);
   }
+
+  const tempoSeq = (Date.now() - inizio) / 1000;
+  console.log(`Sequenziale: ${tempoSeq}s`);
+  return tempoSeq;
 }
+
+async function parallelo() {
+  const inizio = Date.now();
+  const utenti = await Promise.all(ids.map(caricaUtente));
+  utenti.forEach((u) => console.log(u));
+  const tempoPar = (Date.now() - inizio) / 1000;
+  console.log(`Parallelo: ${tempoPar}s`);
+  return tempoPar;
+}
+
+async function main() {
+  const tempoSeq = await sequenziale();
+  const tempoPar = await parallelo();
+  console.log(`Differenza: ${(tempoSeq - tempoPar).toFixed(2)}s`);
+}
+
+main();
