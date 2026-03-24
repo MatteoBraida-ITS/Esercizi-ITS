@@ -31,11 +31,16 @@ let parolaCorta = paroleTotali.reduce(
 
 //voglio contare i caratteri di ogni parola e
 //poi fare la media dei caratteri delle parole utilizzate nella frase
+let totaleCaratteri = 0;
+
 paroleTotali.forEach((parola) => {
-  parola.length;
+  totaleCaratteri += parola.length;
 });
+
+const mediaCaratteri = totaleCaratteri / paroleTotali.length;
 
 console.log(`Frase: ${parole}`);
 console.log(`Parole: ${paroleTotali.length}`);
 console.log(`Parola più lunga: "${parolaLunga}"`);
 console.log(`Parola più corta: "${parolaCorta}"`);
+console.log(`Media caratteri: "${mediaCaratteri.toFixed(2)}"`);
