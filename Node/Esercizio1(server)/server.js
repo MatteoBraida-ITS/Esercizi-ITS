@@ -8,8 +8,8 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(data);
     });
-  } else if (req.url === "/Chi-siamo") {
-    fs.readFile("pages/Chi-siamo.html", (err, data) => {
+  } else if (req.url === "/ChiSiamo") {
+    fs.readFile("pages/ChiSiamo.html", (err, data) => {
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(data);
     });
