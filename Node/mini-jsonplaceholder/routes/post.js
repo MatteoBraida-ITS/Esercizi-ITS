@@ -11,6 +11,7 @@ import {
   prossimoId,
   trovaPerId,
   trovaIndicePerId,
+  utenti,
 } from "../data/database.js";
 
 const router = Router();
@@ -35,13 +36,14 @@ const router = Router();
 router.get("/", (req, res) => {
   const { userId } = req.query;
 
-  parseInt(userId);
+  const idPost = parseInt(userId);
 
   if (userId) {
-    const filtrato = post.filter(userId);
-
-    return res.json(filtrato);
+    const filtrati = post.filter((p) => p.userId === idPost);
+    return res.json(filtrati);
   }
+
+  res.json(post);
 });
 
 // ============================================================
@@ -50,7 +52,16 @@ router.get("/", (req, res) => {
 // Seguite lo stesso pattern del GET singolo in utenti.js.
 
 router.get("/:id", (req, res) => {
-  // TODO: implementa qui
+  const id = parseInt(req.params.id);
+  const postUtente = trovaPerId(post, id);
+
+  if (!postUtente) {
+    return res.status(404).json({
+      errore: `Post con id ${id} non trovato`,
+    });
+  }
+
+  res.json(postUtente);
 });
 
 // ============================================================
@@ -73,7 +84,25 @@ router.get("/:id", (req, res) => {
 //   { "id": 9, "userId": 1, "titolo": "Nuovo post", "corpo": "Contenuto del post" }
 
 router.post("/", (req, res) => {
-  // TODO: implementa qui
+  const { userId, titolo, corpo } = req.body;
+
+  if (!userId || !titolo || !corpo) {
+    return res.status(400).json({
+      errore: `userId, titolo e corpo sono OBBLIGATORI!`,
+    });
+  }
+
+  const id = prossimoId("post");
+
+  const nuovoPost = {
+    id: id,
+    userId: userId,
+    titolo: titolo,
+    corpo: corpo,
+  };
+
+  post.push(nuovoPost);
+  res.status(201).json(nuovoPost);
 });
 
 // ============================================================
@@ -85,7 +114,26 @@ router.post("/", (req, res) => {
 // Stessa logica del PUT in utenti.js, ma con campi diversi.
 
 router.put("/:id", (req, res) => {
-  // TODO: implementa qui
+  const id = parseInt(req.params.id);
+  const indice = trovaIndicePerId(post, id);
+
+  if (indice === -1) {
+    return res.status(404).json({
+      errore: `indice utente non esiste`,
+    });
+  }
+
+  const { userId, titolo, corpo } = req.body;
+
+  if (!userId || !titolo || !corpo) {
+    return res.status(400).json({
+      errore: `userId, titolo e corpo sono obbligatori`,
+    });
+  }
+
+  post[indice] = { id, userId, titolo, corpo };
+
+  res.status(200).json(post[indice]);
 });
 
 // ============================================================
@@ -97,7 +145,23 @@ router.put("/:id", (req, res) => {
 // Stessa logica del PATCH in utenti.js, ma con campi diversi.
 
 router.patch("/:id", (req, res) => {
-  // TODO: implementa qui
+  const id = parseInt(req.params.id);
+
+  const postAggiornato = trovaPerId(post, id);
+
+  if (!postAggiornato) {
+    return res.status(404).json({
+      errore: `Post non trovato`,
+    });
+  }
+
+  const { userId, titolo, corpo } = req.body;
+
+  if (userId !== undefined) postAggiornato.userId = userId;
+  if (titolo !== undefined) postAggiornato.titolo = titolo;
+  if (corpo !== undefined) postAggiornato.corpo = corpo;
+
+  res.status(200).json(postAggiornato);
 });
 
 // ============================================================
@@ -106,7 +170,21 @@ router.patch("/:id", (req, res) => {
 // Stessa logica del DELETE in utenti.js.
 
 router.delete("/:id", (req, res) => {
-  // TODO: implementa qui
+  const id = parseInt(req.params.id);
+  const indice = trovaIndicePerId(post, id);
+
+  if (indice === -1) {
+    return res.status(404).json({
+      errore: `Indice post non esiste`,
+    });
+  }
+
+  const [rimosso] = post.splice(indice, 1);
+
+  res.status(200).json({
+    messaggio: `Post eliminato`,
+    post: rimosso,
+  });
 });
 
 export default router;

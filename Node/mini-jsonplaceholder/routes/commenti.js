@@ -9,7 +9,13 @@
 // A questo punto dovreste aver preso il ritmo! 💪
 
 import { Router } from "express";
-import { commenti, prossimoId, trovaPerId, trovaIndicePerId } from "../data/database.js";
+import {
+  commenti,
+  prossimoId,
+  trovaPerId,
+  trovaIndicePerId,
+  post,
+} from "../data/database.js";
 
 const router = Router();
 
@@ -23,7 +29,16 @@ const router = Router();
 // Stessa logica del filtro userId nei post.
 
 router.get("/", (req, res) => {
-    // TODO: implementa qui
+  const { postId } = req.query;
+
+  const idCommento = parseInt(postId);
+
+  if (postId) {
+    const filtrati = commenti.filter((c) => c.postId === idCommento);
+    return res.json(filtrati);
+  }
+
+  res.json(commenti);
 });
 
 // ============================================================
@@ -31,7 +46,16 @@ router.get("/", (req, res) => {
 // ============================================================
 
 router.get("/:id", (req, res) => {
-    // TODO: implementa qui
+  const id = parseInt(req.params.id);
+  const commentoUtente = trovaPerId(commenti, id);
+
+  if (!commentoUtente) {
+    return res.status(404).json({
+      errore: `Commento con id ${id} non trovato`,
+    });
+  }
+
+  res.json(commentoUtente);
 });
 
 // ============================================================
@@ -49,7 +73,26 @@ router.get("/:id", (req, res) => {
 //   }
 
 router.post("/", (req, res) => {
-    // TODO: implementa qui
+  const { postId, nome, email, corpo } = req.body;
+
+  if (!postId || !nome || !email || !corpo) {
+    return res.status(400).json({
+      errore: `postId, nome, email e corpo sono OBBLIGATORI!`,
+    });
+  }
+
+  const id = prossimoId("commenti");
+
+  const nuovoCommento = {
+    id: id,
+    postId: postId,
+    nome: nome,
+    email: email,
+    corpo: corpo,
+  };
+
+  commenti.push(nuovoCommento);
+  res.status(201).json(nuovoCommento);
 });
 
 // ============================================================
@@ -58,7 +101,26 @@ router.post("/", (req, res) => {
 // Campi obbligatori nel body: "postId", "nome", "email", "corpo"
 
 router.put("/:id", (req, res) => {
-    // TODO: implementa qui
+  const id = parseInt(req.params.id);
+  const indice = trovaIndicePerId(commenti, id);
+
+  if (indice === -1) {
+    return res.status(404).json({
+      errore: `indice utente non esiste`,
+    });
+  }
+
+  const { postId, nome, email, corpo } = req.body;
+
+  if (!postId || !nome || !email || !corpo) {
+    return res.status(400).json({
+      errore: `postId, nome, email e corpo sono OBBLIGATORI!`,
+    });
+  }
+
+  commenti[indice] = { id, postId, nome, email, corpo };
+
+  res.status(200).json(commenti[indice]);
 });
 
 // ============================================================
@@ -67,7 +129,24 @@ router.put("/:id", (req, res) => {
 // Accetta uno o più campi: "postId", "nome", "email", "corpo"
 
 router.patch("/:id", (req, res) => {
-    // TODO: implementa qui
+  const id = parseInt(req.params.id);
+
+  const commentoAggiornato = trovaPerId(commenti, id);
+
+  if (!commentoAggiornato) {
+    return res.status(404).json({
+      errore: `Commento non trovato`,
+    });
+  }
+
+  const { postId, nome, email, corpo } = req.body;
+
+  if (postId !== undefined) commentoAggiornato.postId = postId;
+  if (nome !== undefined) commentoAggiornato.nome = nome;
+  if (email !== undefined) commentoAggiornato.email = email;
+  if (corpo !== undefined) commentoAggiornato.corpo = corpo;
+
+  res.status(200).json(commentoAggiornato);
 });
 
 // ============================================================
@@ -75,7 +154,21 @@ router.patch("/:id", (req, res) => {
 // ============================================================
 
 router.delete("/:id", (req, res) => {
-    // TODO: implementa qui
+  const id = parseInt(req.params.id);
+  const indice = trovaIndicePerId(commenti, id);
+
+  if (indice === -1) {
+    return res.status(404).json({
+      errore: `Indice commento non esiste`,
+    });
+  }
+
+  const [rimosso] = commenti.splice(indice, 1);
+
+  res.status(200).json({
+    messaggio: `Commento eliminato`,
+    commento: rimosso,
+  });
 });
 
 export default router;
