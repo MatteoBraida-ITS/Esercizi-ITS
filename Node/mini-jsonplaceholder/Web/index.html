@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Mini-JSONplaceholder</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mini-JSONplaceholder</h1>
+    </header>
+
+    <!-- Barra URL -->
+    <div id="request-bar">
+      <select id="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <input id="url" type="text" value="http://localhost:3000/api/utenti" />
+      <button id="send-btn">Invia</button>
+    </div>
+
+    <!-- Bottoni rapidi -->
+    <div id="quick-endpoints">...</div>
+
+    <!-- Pannello body + risposta -->
+    <div id="panels">
+      <div id="body-section">
+        <textarea id="body"></textarea>
+      </div>
+      <div id="response-section">
+        <span id="status"></span>
+        <pre id="response-body"></pre>
+      </div>
+    </div>
+
+    <div id="quick-endpoints"></div>
+  </body>
+  <script src="app.js"></script>
+</html>
