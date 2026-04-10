@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="min" type="text" />
+    <input id="max" type="text" />
+    <button onclick="genera()">genera</button>
+    <p id="numeri"></p>
+    <p id="errore"></p>
+  </body>
+  <script>
+    function genera(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+
+      if (isNaN(min) || isNaN(max)) {
+        alert("errore, dato di tipo errato.");
+        return;
+      }
+
+      let somma = 0;
+      for (i = 0; i <= 5; i++) {
+        let valgenerato = genera(min, max);
+
+        somma = somma + valgenerato;
+      }
+      let numeri = document.getElementById("numeri");
+
+      numeri.textContent = `i valori sono ${somma}`;
+    }
+  </script>
+</html>

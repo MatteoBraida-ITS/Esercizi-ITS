@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  overflow-y: auto;
+}
+
+.form-area {
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.form-area input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+.result-area {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 0.5rem;
+  flex: 1;
+}
+
+.result-area h2 {
+  color: white;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: gray;
+}
+
+h1 {
+  color: white;
+}
+
+.request-btn {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 15rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.card .card-nome {
+  font-weight: bold;
+  color: #333;
+}
+
+.card .card-email,
+.card .card-citta {
+  display: none;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.card.aperta .card-email,
+.card.aperta .card-citta {
+  display: block;
+}
