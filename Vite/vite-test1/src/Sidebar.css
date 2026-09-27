@@ -1,0 +1,46 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  width: 220px;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  border-right: 1px solid lightgray;
+  text-align: left;
+}
+
+.sidebar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar > div:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* hide the image when no icon is passed */
+.sidebar img:not([src]) {
+  display: none;
+}
+
+.sidebar span {
+  color: black;
+  font-size: 18px;
+}
+
+.sidebar > div:hover span {
+  color: darkgreen;
+}

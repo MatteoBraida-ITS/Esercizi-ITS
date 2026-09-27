@@ -39,6 +39,11 @@
   font-size: 24px;
 }
 
+.prdName {
+  color: black;
+  font-size: 22px;
+}
+
 .prdPrice {
   color: darkgreen;
   font-size: 22px;

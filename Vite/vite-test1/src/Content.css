@@ -1,0 +1,38 @@
+.content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  text-align: left;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.content-title {
+  margin: 0;
+  color: black;
+}
+
+.content-btn {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.content-btn:hover {
+  border-color: darkgreen;
+  color: darkgreen;
+}
+
+.content-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}

@@ -187,3 +187,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.spacing {
+  width: 200px;
+}
