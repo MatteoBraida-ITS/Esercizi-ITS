@@ -1,0 +1,55 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 260px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 15px;
+}
+
+.prdImg {
+  width: 4rem;
+}
+
+.prdInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.prdName {
+  color: black;
+  font-size: 24px;
+}
+
+.prdPrice {
+  color: darkgreen;
+  font-size: 22px;
+}
+
+.cartBtn {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
