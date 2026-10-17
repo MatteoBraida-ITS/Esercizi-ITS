@@ -1,0 +1,34 @@
+:root {
+  --bg-primario: #3f5a2a;
+  --bg-scuro: #2b3f1c;
+  --bg-accento: #c2410c;
+  --bg-bianco: #fff;
+  --text-prmario: #1c1f1a;
+  --text-secondario: #57534e;
+  --text-bianco: #fff;
+}
+
+.info {
+  border-color: #1d4ed8;
+  background-color: #e8eefc;
+}
+
+.successo {
+  border-color: #166534;
+  background-color: #e7f4ea;
+}
+
+.attenzione {
+  border-color: #92400e;
+  background-color: #fdf3dc;
+}
+
+.errore {
+  border-color: #b91c1c;
+  background-color: #fde8e8;
+}
+
+.fantasma {
+  border-color: transparent;
+  background-color: transparent;
+}
