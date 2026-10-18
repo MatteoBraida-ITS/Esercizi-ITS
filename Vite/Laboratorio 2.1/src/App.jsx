@@ -4,15 +4,15 @@ import Button from "./Button";
 function App() {
   return (
     <div style={{ display: "flex", gap: 15, alignItems: "flex-end" }}>
-      <Button variante="primario" dimensione="sm">
-        Acquista
+      <Button variante="secondario" dimensione="sm" icona="icona"></Button>
+      <Button variante="secondario" icona="iconaDX">
+        Continua
       </Button>
-      <Button variante="primario">Acquista</Button>
       <Button variante="primario" dimensione="lg">
         Acquista
       </Button>
-      <Button variante="primario" dimensione="full">
-        Acquista
+      <Button variante="primario" dimensione="full" icona="iconaSX">
+        Aggiungi al carrello
       </Button>
     </div>
   );

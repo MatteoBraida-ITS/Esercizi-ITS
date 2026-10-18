@@ -63,6 +63,59 @@ body {
   width: 320px;
 }
 
+.btn--iconaSX {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--iconaSX::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-color: currentColor;
+  mask-image: url(./assets/cart.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.btn--iconaDX {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--iconaDX::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: currentColor;
+  mask-image: url(./assets/ArrowRight.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.btn--icona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--icona::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask-image: url(./assets/heart.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
 .border-sm {
   border-radius: 6px;
 }
