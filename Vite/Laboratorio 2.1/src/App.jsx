@@ -1,19 +1,18 @@
 import "./App.css";
 import Button from "./Button";
+import ActionButton from "./Laboratorio 4/ActionButton";
+import Calcolatrice from "./Laboratorio 4/Calcolatrice";
+import LightDarkMode from "./Laboratorio 4/LigthDarkMode";
+import LikeButton from "./Laboratorio 4/LikeButton";
+import Saluti from "./Laboratorio 4/Saluti";
+import ProfiloUtente from "./ProfiloUtente";
 
 function App() {
   return (
-    <div style={{ display: "flex", gap: 15, alignItems: "flex-end" }}>
-      <Button variante="secondario" dimensione="sm" icona="icona"></Button>
-      <Button variante="secondario" icona="iconaDX">
-        Continua
-      </Button>
-      <Button variante="primario" dimensione="lg">
-        Acquista
-      </Button>
-      <Button variante="primario" dimensione="full" icona="iconaSX">
-        Aggiungi al carrello
-      </Button>
+    <div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
+      <LikeButton likeIniziali={0}></LikeButton>
+      <LikeButton likeIniziali={12}></LikeButton>
+      <LikeButton likeIniziali={340}></LikeButton>
     </div>
   );
 }
