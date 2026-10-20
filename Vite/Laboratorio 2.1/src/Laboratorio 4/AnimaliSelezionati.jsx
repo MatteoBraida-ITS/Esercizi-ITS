@@ -25,7 +25,9 @@ function AnimaliSelezionati() {
                   const arraySenzaAnimaleCliccato = nonSelezionatoList.filter(
                     (item) => item !== animale,
                   );
+                  const nuovoArraySelezionati = [...selezionatoList, animale];
                   setNonSelezionatoList(arraySenzaAnimaleCliccato);
+                  setSelezionatiList(nuovoArraySelezionati);
                 }}
               >
                 {animale}
@@ -36,6 +38,24 @@ function AnimaliSelezionati() {
       </div>
       <div>
         <h3 style={{ margin: "10px 0" }}>Selezionati</h3>
+        <div style={{ display: "flex", gap: 10 }}>
+          {selezionatoList.map((animale) => {
+            return (
+              <span
+                key={animale}
+                style={{
+                  border: "1px solid black",
+                  borderRadius: 15,
+                  padding: 10,
+                  backgroundColor: "lightgreen",
+                }}
+                onClick={() => {}}
+              >
+                {animale}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
