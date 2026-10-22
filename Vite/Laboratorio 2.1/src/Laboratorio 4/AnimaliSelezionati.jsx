@@ -11,7 +11,13 @@ function AnimaliSelezionati() {
     <div style={{ display: "flex", gap: 15, flexDirection: "column" }}>
       <div>
         <h3 style={{ margin: "10px 0" }}>Non selezionati</h3>
-        <div style={{ display: "flex", gap: 10 }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 10,
+            borderBottom: "1px solid lightgray",
+          }}
+        >
           {nonSelezionatoList.map((animale) => {
             return (
               <span
@@ -20,6 +26,7 @@ function AnimaliSelezionati() {
                   border: "1px solid black",
                   borderRadius: 15,
                   padding: 10,
+                  marginBottom: 10,
                 }}
                 onClick={() => {
                   const arraySenzaAnimaleCliccato = nonSelezionatoList.filter(
@@ -49,7 +56,17 @@ function AnimaliSelezionati() {
                   padding: 10,
                   backgroundColor: "lightgreen",
                 }}
-                onClick={() => {}}
+                onClick={() => {
+                  const arraySenzaAnimaleCliccato = selezionatoList.filter(
+                    (item) => item !== animale,
+                  );
+                  const nuovoArraySelezionati = [
+                    ...nonSelezionatoList,
+                    animale,
+                  ];
+                  setSelezionatiList(arraySenzaAnimaleCliccato);
+                  setNonSelezionatoList(nuovoArraySelezionati);
+                }}
               >
                 {animale}
               </span>
