@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Button from "./Button";
 import ActionButton from "./Laboratorio 4/ActionButton";
 import Calcolatrice from "./Laboratorio 4/Calcolatrice";
 import FaqItem from "./Laboratorio 4/FaqItem";
@@ -10,6 +9,7 @@ import Saluti from "./Laboratorio 4/Saluti";
 import ProfiloUtente from "./ProfiloUtente";
 import FaqList from "./Laboratorio 4/FaqList";
 import AnimaliSelezionati from "./Laboratorio 4/AnimaliSelezionati";
+import Button from "@mui/material/Button";
 
 const utenti = [
   {
@@ -68,6 +68,25 @@ function App() {
           isAdmin={utente.isAdmin}
         ></ProfiloUtente>
       ))}
+      <div className="flex gap-20">
+        <Button variant="contained" style={{ width: "fit-content" }}>
+          Ricarica Utenti
+        </Button>
+        <Button
+          variant="contained"
+          color="error"
+          style={{ width: "fit-content" }}
+        >
+          Elimina utente
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          style={{ width: "fit-content" }}
+        >
+          Aggiorna utente
+        </Button>
+      </div>
     </div>
   );
 }
